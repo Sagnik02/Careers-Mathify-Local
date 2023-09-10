@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Mathify Careers</title>
+    {% include 'bootstrap.html' %}
+    <style>
+      #poster{
+        height: 360px;
+        object-fit:cover;
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+
+    {% include 'nav.html' %}
+    <div class="container">
+    
+  <h1 class="text-center mt-1 mb-4 fst-italic">Mathify Careers</h1>
+    <img id="poster" class="img-fluid" src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" >
+
+    <h2 class="text-center mt-4 ">About Mathify</h2>
+  <p class="lead">
+
+Mathify is a cutting-edge educational platform revolutionizing the way students engage with mathematics. Dedicated to helping students excel in their mathematical journey, Mathify provides a dynamic and intuitive learning environment that caters to individual needs. With a vast array of interactive resources and personalized tutoring, Mathify empowers students to tackle complex concepts, solve problems, and build a solid foundation in math. From elementary school to advanced calculus, the platform offers comprehensive lessons, real-time feedback, and adaptive exercises, ensuring a tailored learning experience for every student. Through Mathify, students unlock their full potential, gaining confidence and mastery in mathematics, and paving the way for a successful academic future.
+  </p>
+
+    <h2 class="text-center  mb-4">Job Open Positions Hiring !!</h2>
+    <div>
+      {% for job in jobs %}
+          {% include 'job.html' %}
+      {% endfor %}
+    </div>
+    <div class="text-center">
+    <a href="mailto:sagnikrc02@gmail.com?subject= Query "><button class="btn btn-primary btn-lg"> Contact Us</button> </a>
+    </div>
+    </div>
+     {% include 'footer.html' %}
+  </body>
+  
+</html>

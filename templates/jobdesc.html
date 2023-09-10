@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Mathify Careers/{{job.title}}</title>
+    {% include 'bootstrap.html' %}
+    <style>
+        #poster{
+        height: 360px;
+        object-fit:cover;
+        width:100%;
+      }
+      </style>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+
+    <div class="container">
+      
+      <h1 class="text-center mt-2 mb-4">
+        Mathify Careers
+      </h1>
+
+    <img id="poster" class="img-fluid" src="https://careers-mathify.sagnikroy5.repl.co/static/poster.jpg" >
+
+      
+      <h3 style="margin-top:10px">{{job.title}}</h3>
+      <p class="lead">{{job.location}}</p>
+      <h4>Responsibilities</h4>
+      <p>{{job.responsibilities}}</p>
+      <h4>Requirements</h4>
+         <p>{{job.requirements}}</p>
+            <h4>Salary</h4>
+      <p>Rs {{job.salary}}</p>
+      {% include 'jobapply_form.html' %}
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>
